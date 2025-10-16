@@ -9,11 +9,13 @@
 }
 
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     display: flex;
@@ -21,7 +23,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(rgb(255, 246, 228), rgb(236, 94, 118));
+    background: rgb(244, 143, 159);
+    background-repeat: repeat;
     font-size: 15px;
 }
 
@@ -163,4 +166,44 @@ body {
     right: 80px;
     background: linear-gradient(20deg, rgb(246, 183, 141), rgb(233, 160, 216)) ;
     border-radius: 58% 42% 62% 38% / 44% 47% 53% 56%  ;
+}
+
+/*=== Media ===*/
+@media (max-width: 480px) {
+    #toDoInput{
+        width: 170px;
+    }
+    .block.one{
+        bottom: 10px;
+        left: 10px;
+    }
+    .block.three{
+        top: 50%;
+        right: 20px;
+    }
+    .block.two{
+        top: 30px;
+        right: 20px;
+    }
+    #toDoList{
+        width: 300px;
+    }
+    .card p{
+        width: 120px;
+    }
+}
+
+@media (min-width:481px) and (max-width: 740px) {
+    .block.one{
+        bottom: 30px;
+        left: 20px;
+    }
+    .block.three{
+        top: 50%;
+        right: 20px;
+    }
+    .block.two{
+        top: 30px;
+        right: 20px;
+    }
 }
