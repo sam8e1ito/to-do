@@ -1,6 +1,12 @@
 const toDoList = document.getElementById('toDoList');
 const toDoInput = document.getElementById('toDoInput');
 
+toDoInput.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){
+        save();
+    }
+});
+
 function save(){
     if(!toDoInput.value){
         return;
@@ -37,7 +43,7 @@ function save(){
         card.appendChild(doneBtn);
         card.appendChild(toDo);
         card.appendChild(delBtn);    
-        toDoList.prepend(card);        
+        toDoList.append(card);        
     }
 
 }
